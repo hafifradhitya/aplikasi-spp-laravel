@@ -8,11 +8,13 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     */ 
+     */
     public function up(): void
     {
         Schema::create('spp', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_spp');
+            $table->integer('tahun');
+            $table->integer('nominal');
             $table->timestamps();
         });
     }
