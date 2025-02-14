@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('login');
 });
+Route::get('/beranda', [ProfileController::class, 'index'])->name('beranda');
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
