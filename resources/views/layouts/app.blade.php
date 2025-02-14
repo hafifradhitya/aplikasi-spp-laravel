@@ -50,6 +50,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('users') ? 'active' : '' }}" href="{{ route('users') }}">
+                            <i class="bi bi-speedometer2 me-2"></i> Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('profile.edit') }}">
                             <i class="bi bi-person me-2"></i> Profile
                         </a>
