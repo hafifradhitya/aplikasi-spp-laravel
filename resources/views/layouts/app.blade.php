@@ -56,14 +56,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('users') ? 'active' : '' }}" href="{{ route('users') }}">
-                            <i class="bi bi-speedometer2 me-2"></i> Users
+                            <i class="bi bi-people-fill"></i> Users
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile.edit') }}">
-                            <i class="bi bi-person me-2"></i> Profile
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
 
@@ -77,8 +73,11 @@
                                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
                                     {{ Auth::user()->name }}
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li>
+                                <ul class="dropdown-menu dropdown-menu-end p-1 m-1 border border-dark rounded-2">
+                                    <li >
+                                        <a class=" dropdown-item" href="{{ route('profile.edit') }}">
+                                           Profile
+                                        </a>
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
                                             <button class="dropdown-item" type="submit">Logout</button>
