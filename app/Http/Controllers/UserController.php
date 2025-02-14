@@ -14,6 +14,11 @@ class UserController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
+    public function create()
+    {
+        return view('admin.users.create');
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([

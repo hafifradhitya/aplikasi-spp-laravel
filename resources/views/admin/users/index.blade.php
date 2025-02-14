@@ -6,15 +6,15 @@
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Users List</h5>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createUserModal">
+            <a href="{{ route('users.create') }}" class="btn btn-primary">
                 Add New User
-            </button>
+            </a>
         </div>
         <div class="card-body">
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Name</th>
                         <th>Username</th>
                         <th>Email</th>
