@@ -33,8 +33,7 @@
                     <h1 class="display-4 fw-bold text-blue mb-4">Aplikasi SPP Online</h1>
                     <p class="lead mb-4">Selamat datang di sistem pembayaran SPP online. Kelola pembayaran SPP dengan mudah dan efisien.</p>
                     <div class="d-flex gap-3">
-                        <a href="{{ route('login') }}" class="btn btn-primary px-4 py-2">Login</a>
-                        <a href="#fitur" class="btn btn-light-blue px-4 py-2">Lihat Fitur</a>
+                        <a href="{{ route('login') }}" class="btn btn-primary px-4 py-2">Login</a> 
                     </div>
                 </div>
                 <div class="col-lg-6">
