@@ -68,6 +68,11 @@
                             <i class="bi bi-people-fill"></i> Users
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('kompetensi') ? 'active' : '' }}" href="{{ route('kompetensi') }}">
+                            <i class="bi bi-amd"></i> Kompetensi
+                        </a>
+                    </li>
                     
                 </ul>
             </div>
