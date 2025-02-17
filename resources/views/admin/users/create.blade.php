@@ -7,7 +7,7 @@
             <x-input-label for="name" :value="__('FullName')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" required />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
-        </div>
+        </div>  
 
         <div class="mt-6">
             <x-input-label for="username" :value="__('Username')" />
@@ -26,7 +26,7 @@
             <x-text-input id="password" name="password" type="password" class="mt-1 block w-full" required />
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
-
+ 
         <div class="mt-6 flex justify-end">
             <x-secondary-button x-on:click="$dispatch('close')">
                 {{ __('Cancel') }}

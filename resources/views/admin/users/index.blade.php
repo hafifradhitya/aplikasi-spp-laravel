@@ -8,8 +8,8 @@
             <h5 class="mb-0">Users List</h5>
             <button type="button" x-data="" x-on:click.prevent="$dispatch('open-modal', 'create-user')" class="btn btn-primary">
                 Add New User
-            </button>           
-        </div>  
+            </button>            
+        </div>   
         <div class="card-body">
             <table id="example" class="table table-striped" style="width:100%">
                 <thead>
@@ -37,13 +37,15 @@
                                 data-name="{{ $user->name }}"
                                 data-username="{{ $user->username }}"
                                 data-email="{{ $user->email }}">
-                                Edit
+                                Edit 
                             </button>  
+                            @if(auth()->user()->id_user != $user->id_user)
                             <form action="{{ route('users.destroy', $user->id_user) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
                             </form>
+                            @endif
                         </td>
                     </tr>
                     @endforeach
@@ -61,13 +63,21 @@
         $(document).ready(function() {
             // Initialize DataTable
             $('#example').DataTable({
+                "processing": true,
+                "serverSide": false,
                 dom: '<"top"lBf>rt<"bottom"ip><"clear">',
                 buttons: [
                     'copy', 'csv', 'excel', 'pdf', 'print'
                 ],
                 lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
                 pageLength: 10,
-                order: [[0, 'desc']]
+                order: [[0, 'asc']],
+                columnDefs: [
+                    {
+                        targets: 2,
+                        orderable: false
+                    }
+                ]
             });
 
             // Edit user click handler
