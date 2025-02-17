@@ -12,12 +12,12 @@ class UserController extends Controller
     {
         $users = User::all();
         return view('admin.users.index', compact('users'));
-    }
+    } 
 
     public function create()
     {
         return view('admin.users.create');
-    }
+    } 
 
     public function store(Request $request)
     {
@@ -26,7 +26,7 @@ class UserController extends Controller
             'username' => 'required|string|max:255|unique:users',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
-        ]);
+        ]); 
 
         $validated['password'] = Hash::make($validated['password']);
 

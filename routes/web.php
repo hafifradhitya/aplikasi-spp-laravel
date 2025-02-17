@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 Route::get('/beranda', [ProfileController::class, 'index'])->name('beranda');
-
+ 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
