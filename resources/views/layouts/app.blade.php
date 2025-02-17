@@ -34,6 +34,15 @@
                 min-height: 100vh;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
             }
+
+            .nav-link {
+            color: #000000 !important;
+        }
+
+        .nav-link.active {
+            color: #000000 !important;
+            background-color: var(--light-blue) !important;
+        }
         </style>
 
         <!-- Scripts -->
